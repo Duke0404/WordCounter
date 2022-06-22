@@ -6,10 +6,17 @@ import './TopBar.css'
 //Components
 import CountResult from '../CountResult/CountResult'
 
-const TopBar = () =>
+//Interfaces
+interface TopBarProps {
+    count: number
+}
+
+const TopBar = (props: TopBarProps) =>
     <nav id="top-bar">
         {/*Image*/}
-        <CountResult />
+        <CountResult
+            count={props.count}
+        />
     </nav>
 
 export default TopBar
