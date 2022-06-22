@@ -6,9 +6,9 @@ import './App.css';
 
 //Components
 import TopBar from '../TopBar/TopBar'
-import Page from '../Page/Page';
+import Page from '../Page/Page'
 
-const App =  () => {
+const App = (): JSX.Element => {
 	//States
 	const [content, setContent] = useState("")
 	const [count, setCount] = useState(0)
@@ -23,10 +23,11 @@ const App =  () => {
 
 	//Functions
 	const countWords = (text: string): number => {
-		let textArray: string[] = text.split(" ").filter(
-			word =>
-				!(word in [".", ",", "!", "?", ":", ";", "..."]
-				)
+		if(text === "")
+			return 0
+
+		let textArray: string[] = text.trimEnd().split(" ").filter(
+			word => word !== (" ") 
 		)
 
 		return textArray.length

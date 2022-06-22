@@ -8,7 +8,7 @@ import './index.css'
 //Components
 import App from './Components/App/App'
 
-const root = ReactDOM.createRoot(
+const root: ReactDOM.Root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 )
 
