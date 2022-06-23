@@ -13,7 +13,11 @@ interface TopBarProps {
 
 const TopBar = (props: TopBarProps) =>
     <nav id="top-bar">
-        {/*Image*/}
+        <img
+            src={'../../Assets/Images/logo.svg'}
+            alt="Logo"
+        />
+
         <CountResult
             count={props.count}
         />
