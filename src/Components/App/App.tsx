@@ -26,9 +26,37 @@ const App = (): JSX.Element => {
 		if(text === "")
 			return 0
 
-		let textArray: string[] = text.trimEnd().split(" ").filter(
-			word => word !== (" ") 
+		let textArray: string[] = text.trim().split(" ").filter(
+			(word: string) =>
+				word !== "" &&
+				word !== " " &&
+				word !== "." &&
+				word !== "," &&
+				word !== ";" &&
+				word !== ":" &&
+				word !== "!" &&
+				word !== "?" &&
+				word !== "-" &&
+				word !== "'" &&
+				word !== "\"" &&
+				word !== "(" &&
+				word !== ")" &&
+				word !== "{" &&
+				word !== "}" &&
+				word !== "[" &&
+				word !== "]" &&
+				word !== "*" &&
+				word !== "=" &&
+				word !== "+" &&
+				word !== "-" &&
+				word !== "/" &&
+				word !== "\\" &&
+				word !== "|" &&
+				word !== ">" &&
+				word !== "<"
 		)
+
+		console.log(textArray)
 
 		return textArray.length
 	}
