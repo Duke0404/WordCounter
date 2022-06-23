@@ -1,3 +1,6 @@
+//Styles
+import './Page.css'
+
 //Interfaces
 interface PageProps {
     content: string
@@ -11,14 +14,12 @@ const Page = (props: PageProps): JSX.Element => {
     }
     
     return (
-        <main>
-            <textarea
-                id="content"
-                placeholder="Enter text to count words from..."
-                value={props.content}
-                onChange={inputTextHandler}
-            />
-        </main>
+        <textarea
+            id="content"
+            placeholder="Enter text to count words from..."
+            value={props.content}
+            onChange={inputTextHandler}
+        />
     )
 }
 

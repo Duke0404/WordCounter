@@ -1,3 +1,6 @@
+//Styles
+import './CountResult.css'
+
 //Interfaces
 interface CountResultProps {
     count: number

@@ -8,12 +8,16 @@ import './App.css';
 import TopBar from '../TopBar/TopBar'
 import Page from '../Page/Page'
 
+//App Component
 const App = (): JSX.Element => {
 	//States
+	//Holds text content to count words from
 	const [content, setContent] = useState("")
+	//Holds the number of words in the content
 	const [count, setCount] = useState(0)
 
 	//Effects
+	//Sets count state to new count value when content changes
 	useEffect(
 		() => {
 			setCount(countWords(content))
@@ -22,6 +26,7 @@ const App = (): JSX.Element => {
 	)
 
 	//Functions
+	//Counts the number of words in the content and excludes punctuation
 	const countWords = (text: string): number => {
 		if(text === "")
 			return 0
@@ -53,16 +58,19 @@ const App = (): JSX.Element => {
 				word !== "\\" &&
 				word !== "|" &&
 				word !== ">" &&
-				word !== "<"
+				word !== "<" &&
+				word !== ".." &&
+				word !== "..." &&
+				word !== "...." &&
+				word !== "....." &&
+				word !== "......"
 		)
-
-		console.log(textArray)
 
 		return textArray.length
 	}
 
 	return (
-		<div id="App">
+		<>
 			<TopBar
 				count={count}
 			/>
@@ -71,7 +79,7 @@ const App = (): JSX.Element => {
 				content={content}
 				setContent={setContent}
 			/>
-		</div>
+		</>
 	)
 }
 
