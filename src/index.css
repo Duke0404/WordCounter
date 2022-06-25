@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Stoke&display=swap');
 
 :root {
-  --color-primary: #4B8673;
-  --color-secondary: #5FD068;
-  --color-tertiary: #F5DF99;
+  --color-primary: #06A970;
+  --color-secondary: #08F26E;
+  --color-tertiary: #dcf7e2;
   --color-background: #F6FBF4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #06A970;
+    --color-secondary: #08F26E;
+    --color-tertiary: #555c68;
+    --color-background: #21231e;
+  }
 }
 
 body {
