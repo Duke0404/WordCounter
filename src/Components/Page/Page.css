@@ -1,9 +1,11 @@
 #content {
+    background-color: var(--color-tertiary);
     width: 98%;
-    min-height: 90vh;
+    min-height: 88vh;
     padding: 15px 20px;
+    margin-bottom: 15px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 0;
     border-radius: 15px;
     resize: none;
     font-family: inherit;

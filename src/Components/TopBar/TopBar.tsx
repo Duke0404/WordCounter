@@ -18,6 +18,10 @@ const TopBar = (props: TopBarProps) =>
             alt="Logo"
         />
 
+        <h1 id="title">
+            Word Counter
+        </h1>
+
         <CountResult
             count={props.count}
         />
