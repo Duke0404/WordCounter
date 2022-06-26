@@ -9,7 +9,7 @@ interface PageProps {
 
 const Page = (props: PageProps): JSX.Element => {
     //Functions
-    const inputTextHandler = (event: any/*: React.ChangeEvent<HTMLTextAreaElement>*/): void => {
+    const inputTextHandler = (event: React.ChangeEvent<HTMLTextAreaElement>): void => {
         props.setContent(event.target.value)
     }
     

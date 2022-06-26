@@ -2,7 +2,7 @@
 import './TopBar.css'
 
 //Images
-import logoSvg from '../../Assets/Images/Logo.svg';
+import LogoSrc from '../../Assets/Images/Logo.svg';
 
 //Components
 import CountResult from '../CountResult/CountResult'
@@ -15,7 +15,8 @@ interface TopBarProps {
 const TopBar = (props: TopBarProps) =>
     <nav id="top-bar">
         <img
-            src={logoSvg}
+            id="logo"
+            src={LogoSrc}
             alt="Logo"
         />
 

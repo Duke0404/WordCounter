@@ -1,8 +1,5 @@
 //React Stuff
-import { useState, useEffect } from 'react'
-
-//Styles
-import './App.css';
+import React, { useState, useEffect } from 'react'
 
 //Components
 import TopBar from '../TopBar/TopBar'
@@ -12,9 +9,9 @@ import Page from '../Page/Page'
 const App = (): JSX.Element => {
 	//States
 	//Holds text content to count words from
-	const [content, setContent] = useState("")
+	const [content, setContent]: [string, React.Dispatch<React.SetStateAction<string>>] = useState("")
 	//Holds the number of words in the content
-	const [count, setCount] = useState(0)
+	const [count, setCount]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(0)
 
 	//Effects
 	//Sets count state to new count value when content changes
