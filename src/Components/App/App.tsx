@@ -28,40 +28,22 @@ const App = (): JSX.Element => {
 		if(text === "")
 			return 0
 
-		let textArray: string[] = text.trim().split(" ").filter(
+		const removableCharacters: RegExp = new RegExp(/(\n|\s|\(|\)|\[|\]|\{|\}|<|>|\||\/|\\|'|"|\*|=|\+|!|\?|\.{2}|,{2}|;{2}|:{2}|-{2})/g)
+
+		// const removableWords: RegExp = new RegExp(/(.{0}|\.|,|;|:|-)/)
+
+		let textArray: string[] = text.trim().replace(removableCharacters, " ").split(" ").filter(
 			(word: string) =>
 				word !== "" &&
-				word !== " " &&
 				word !== "." &&
 				word !== "," &&
 				word !== ";" &&
 				word !== ":" &&
-				word !== "!" &&
-				word !== "?" &&
-				word !== "-" &&
-				word !== "'" &&
-				word !== "\"" &&
-				word !== "(" &&
-				word !== ")" &&
-				word !== "{" &&
-				word !== "}" &&
-				word !== "[" &&
-				word !== "]" &&
-				word !== "*" &&
-				word !== "=" &&
-				word !== "+" &&
-				word !== "-" &&
-				word !== "/" &&
-				word !== "\\" &&
-				word !== "|" &&
-				word !== ">" &&
-				word !== "<" &&
-				word !== ".." &&
-				word !== "..." &&
-				word !== "...." &&
-				word !== "....." &&
-				word !== "......"
+				word !== "-"
+				// word.match(removableWords)
 		)
+
+		console.log(textArray)
 
 		return textArray.length
 	}
