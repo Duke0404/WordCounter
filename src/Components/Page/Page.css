@@ -1,12 +1,12 @@
 #content {
     background-color: var(--color-tertiary);
+    color: var(--text-1);
     width: 98%;
-    min-height: 88vh;
+    height: 85vh;
     padding: 15px 20px;
-    margin-bottom: 15px;
     box-sizing: border-box;
     border: 0;
     border-radius: 15px;
-    resize: none;
+    resize: vertical;
     font-family: inherit;
 }

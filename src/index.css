@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Stoke&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
 
 :root {
   --color-primary: #06A970;
   --color-secondary: #08F26E;
   --color-tertiary: #dcf7e2;
   --color-background: #F6FBF4;
+  --text-1: #21231e;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #06A970;
-    --color-secondary: #08F26E;
-    --color-tertiary: #555c68;
+    --color-primary: #006f7d;
+    --color-secondary: #F6FBF4;
+    --color-tertiary: #394139;
     --color-background: #21231e;
+    --text-1: #F6FBF4;
   }
 }
 
@@ -22,11 +24,13 @@ body {
 }
 
 #root {
+  box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  padding: 15px;
+  gap: 15px;
 }
